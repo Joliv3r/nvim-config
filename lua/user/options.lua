@@ -34,6 +34,7 @@ o.linebreak = true                        -- don't split words for wrap
 o.scrolloff = 8                           -- number of lines clearance up and down
 o.sidescrolloff = 8
 o.guifont = "monospace:h17"
+o.termguicolors = true                    -- set term gui colors
 
 -- vim.opt.shortmess = "ilmnrx"                        -- flags to shorten vim messages, see :help 'shortmess'
 vim.opt.shortmess:append "c"                           -- don't give |ins-completion-menu| messages
