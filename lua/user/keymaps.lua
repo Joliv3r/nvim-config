@@ -21,8 +21,7 @@ vim.g.maplocalleader = " "
 -- Some custom maps
 keymap("n", "<leader>s", ":split<cr>", opts)
 keymap("n", "<leader>v", ":vsplit<cr>", opts)
-keymap("n", "<leader>q", ":q<cr>", opts)
-keymap("n", "<leader>w", ":w<cr>", opts)
+keymap("n", "<leader>e", ":Lexplore<cr>", opts)
 
 -- Window nav
 keymap("n", "<C-h>", "<C-w>h", opts)
