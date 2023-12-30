@@ -60,3 +60,7 @@ keymap("x", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("x", "K", ":m '>-2<CR>gv=gv", opts)
 keymap("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("x", "<A-k>", ":m '>-2<CR>gv=gv", opts)
+
+-- Telescope
+keymap("n", "<leader>f", ":Telescope find_files<CR>")
+keymap("n", "<leader>g", ":Telescope live_grep<CR>")
