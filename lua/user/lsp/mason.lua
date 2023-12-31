@@ -43,3 +43,10 @@ for _, server in pairs(servers) do
 
   lspconfig[server].setup(opts)
 end
+
+
+-- HLS
+-- require('lspconfig')['hls'].setup{
+--   filetypes = { 'haskell', 'lhaskell', 'cabal' },
+-- }
+
