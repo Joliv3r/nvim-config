@@ -61,6 +61,7 @@ return packer.startup(function(use)
         require('Comment').setup()
     end
   }  -- Plugin for easy comment
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- snippets
   use "L3MON4D3/LuaSnip"  -- Snippet engine
