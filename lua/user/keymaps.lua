@@ -64,3 +64,6 @@ keymap("x", "<A-k>", ":m '>-2<CR>gv=gv", opts)
 -- Telescope
 keymap("n", "<leader>f", ":Telescope find_files<CR>")
 keymap("n", "<leader>g", ":Telescope live_grep<CR>")
+
+-- Bufferline
+keymap("n", "<leader>d", ":Bdelete<CR>")
