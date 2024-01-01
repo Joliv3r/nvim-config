@@ -4,7 +4,7 @@ if not ok then
   return
 end
 
----@type rainbow_delimiters.config
+-- -@type rainbow_delimiters.config
 vim.g.rainbow_delimiters = {
     strategy = {
         [''] = rainbow_delimiters.strategy['global'],

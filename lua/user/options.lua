@@ -1,4 +1,4 @@
-o = vim.opt
+local o = vim.opt
 
 o.backup = false                          -- creates a backup file
 -- o.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
