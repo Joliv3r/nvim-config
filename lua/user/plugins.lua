@@ -1,5 +1,8 @@
 local fn = vim.fn
 
+vim.o.timeoutlen = 300
+vim.o.timeout = true
+
 -- Automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -79,11 +82,17 @@ return packer.startup(function(use)
   -- Treesitter
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
   use "HiPhish/rainbow-delimiters.nvim"
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    -- config = function()
+    --   require("ibl").setup()
+    -- end
+  }  -- Config in rainbow
 
   -- Autopairs
   use {
 	"windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
+  config = function() require("nvim-autopairs").setup {} end
   }
 
   -- Gitsigns
@@ -106,7 +115,10 @@ return packer.startup(function(use)
   }
 
   -- Help for keybindings
-  use "folke/which-key.nvim"
+  use {"folke/which-key.nvim", event = 'VimEnter'}
+
+  -- Toggleterm
+  use "akinsho/toggleterm.nvim"
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

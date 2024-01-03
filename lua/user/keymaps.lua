@@ -67,3 +67,6 @@ keymap("n", "<leader>g", ":Telescope live_grep<CR>")
 
 -- Bufferline
 keymap("n", "<leader>d", ":Bdelete<CR>")
+
+-- Toggleterm
+keymap("n", "<leader>t", ":ToggleTerm direction=float<CR>")
