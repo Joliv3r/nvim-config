@@ -16,7 +16,7 @@ local plugins = {
   "nvim-lua/plenary.nvim", -- Useful lua functions used in lots of plugins
 
   -- Colorschemes
-  "lunarvim/colorschemes",  -- Some extra colorschemes
+  -- "lunarvim/colorschemes",  -- Some extra colorschemes
 
   -- cmp plugins
   "hrsh7th/nvim-cmp",  -- The completion plugin
@@ -89,6 +89,16 @@ local plugins = {
   "akinsho/toggleterm.nvim",
 }
 
-local opts = {}
+for _, v in pairs(plugins) do
+  table.insert(LAZY_PLUGIN_SPEC, v)
+end
 
-require("lazy").setup(plugins, opts)
+require("lazy").setup {
+  spec = LAZY_PLUGIN_SPEC,
+  install = {
+    colorscheme = { "darkplus", "default" },
+  },
+  ui = {
+    border = "rounded",
+  },
+}
