@@ -52,10 +52,6 @@ function M.config()
 
   local servers = {
     "lua_ls",
-    "html",
-    "bashls",
-    "pyright",
-    "ltex",
   }
 
   local default_diagnostic_config = {

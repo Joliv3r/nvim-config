@@ -4,7 +4,9 @@ return {
     Lua = {
       diagnostics = {
         globals = { "vim", "spec" },
-        missing_parameters = false, -- Missing fields
+        disable = {
+          "missing-fields",
+        }
       },
       runtime = {
         version = "LuaJIT",
