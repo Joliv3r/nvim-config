@@ -32,7 +32,6 @@ local plugins = {
         require('Comment').setup()
     end
   },  -- Plugin for easy comment
-  "JoosepAlviste/nvim-ts-context-commentstring",
 
   -- snippets
   "L3MON4D3/LuaSnip",  -- Snippet engine
@@ -48,7 +47,6 @@ local plugins = {
   --  "nvim-telescope/telescope-media-files.nvim"  -- Telescope extension
 
   -- Treesitter
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
   "HiPhish/rainbow-delimiters.nvim",
   {
     "lukas-reineke/indent-blankline.nvim",

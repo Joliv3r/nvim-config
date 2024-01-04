@@ -22,6 +22,7 @@ vim.g.maplocalleader = " "
 keymap("n", "<leader>s", ":split<cr>", opts)
 keymap("n", "<leader>v", ":vsplit<cr>", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>l", ":Lazy<CR>", opts)
 
 -- Window nav
 keymap("n", "<C-h>", "<C-w>h", opts)
