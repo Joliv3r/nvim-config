@@ -38,7 +38,6 @@ local plugins = {
   "rafamadriz/friendly-snippets",  -- Bunch of snippets
 
   -- LSP
-  "neovim/nvim-lspconfig",  -- Enable LSP
 
   -- Telescope
   "nvim-telescope/telescope.nvim",
