@@ -39,8 +39,6 @@ local plugins = {
 
   -- LSP
   "neovim/nvim-lspconfig",  -- Enable LSP
-  "williamboman/mason.nvim",  -- Simple to use language server installer
-  "williamboman/mason-lspconfig.nvim",
 
   -- Telescope
   "nvim-telescope/telescope.nvim",
@@ -65,8 +63,6 @@ local plugins = {
   "lewis6991/gitsigns.nvim",
 
   -- nvim-tree
-  "nvim-tree/nvim-tree.lua",
-  "nvim-tree/nvim-web-devicons",
 
   -- Bufferline
   "akinsho/bufferline.nvim",
