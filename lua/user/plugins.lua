@@ -19,12 +19,6 @@ local plugins = {
   -- "lunarvim/colorschemes",  -- Some extra colorschemes
 
   -- cmp plugins
-  {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
-  },  -- Plugin for easy comment
 
   -- snippets
 
