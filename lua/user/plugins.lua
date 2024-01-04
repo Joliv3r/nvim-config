@@ -19,13 +19,6 @@ local plugins = {
   -- "lunarvim/colorschemes",  -- Some extra colorschemes
 
   -- cmp plugins
-  "hrsh7th/nvim-cmp",  -- The completion plugin
-  "hrsh7th/cmp-buffer",
-  "hrsh7th/cmp-path",
-  "hrsh7th/cmp-cmdline",
-  "saadparwaiz1/cmp_luasnip",
-  "hrsh7th/cmp-nvim-lsp",
-  "hrsh7th/cmp-nvim-lua",
   {
     'numToStr/Comment.nvim',
     config = function()
@@ -34,13 +27,10 @@ local plugins = {
   },  -- Plugin for easy comment
 
   -- snippets
-  "L3MON4D3/LuaSnip",  -- Snippet engine
-  "rafamadriz/friendly-snippets",  -- Bunch of snippets
 
   -- LSP
 
   -- Telescope
-  "nvim-telescope/telescope.nvim",
   --  "nvim-telescope/telescope-media-files.nvim"  -- Telescope extension
 
   -- Treesitter
@@ -53,10 +43,6 @@ local plugins = {
   },  -- Config in rainbow
 
   -- Autopairs
-  {
-	"windwp/nvim-autopairs",
-  config = function() require("nvim-autopairs").setup {} end
-  },
 
   -- Gitsigns
   "lewis6991/gitsigns.nvim",
