@@ -34,18 +34,10 @@ local plugins = {
   --  "nvim-telescope/telescope-media-files.nvim"  -- Telescope extension
 
   -- Treesitter
-  "HiPhish/rainbow-delimiters.nvim",
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    -- config = function()
-    --   require("ibl").setup()
-    -- end
-  },  -- Config in rainbow
 
   -- Autopairs
 
   -- Gitsigns
-  "lewis6991/gitsigns.nvim",
 
   -- nvim-tree
 
