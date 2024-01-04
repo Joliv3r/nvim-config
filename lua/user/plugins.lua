@@ -42,8 +42,6 @@ local plugins = {
   -- nvim-tree
 
   -- Bufferline
-  "akinsho/bufferline.nvim",
-  "moll/vim-bbye",
 
   -- Starting page
   {
