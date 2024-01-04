@@ -1,12 +1,14 @@
-local status_ok, toggleterm = pcall(require, "toggleterm")
-if not status_ok then
-  return
+local M = {
+  {
+    'akinsho/toggleterm.nvim',
+    event = "VeryLazy",
+  },
+}
+
+
+function M.config()
+  require("toggleterm").setup()
 end
 
 
-toggleterm.setup{
-  shade_terminals = false,
-  float_opts = {
-    border = 'curved',
-  },
-}
+return M

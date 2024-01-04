@@ -12,8 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-  "nvim-lua/popup.nvim",  -- Popup API from vim in neovim
-  "nvim-lua/plenary.nvim", -- Useful lua functions used in lots of plugins
 
   -- Colorschemes
   -- "lunarvim/colorschemes",  -- Some extra colorschemes
@@ -49,7 +47,6 @@ local plugins = {
   {"folke/which-key.nvim", event = 'VimEnter'},
 
   -- Toggleterm
-  "akinsho/toggleterm.nvim",
 }
 
 for _, v in pairs(plugins) do
