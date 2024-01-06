@@ -21,15 +21,15 @@ vim.g.maplocalleader = " "
 -- Some custom maps
 keymap("n", "<leader>s", ":split<cr>", opts)
 keymap("n", "<leader>v", ":vsplit<cr>", opts)
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+-- keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>l", ":Lazy<CR>", opts)
-keymap("n", "<leader>q", ":q<CR>", opts)
-keymap("n", "<leader>fs", ":w<CR>", opts)
+-- keymap("n", "<leader>q", ":q<CR>", opts)
 
 -- File navigation through Telescope
-keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
-keymap("n", "<leader>fr", ":Telescope oldfiles<CR>", opts)
+-- keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+-- keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
+-- keymap("n", "<leader>fr", ":Telescope oldfiles<CR>", opts)
+-- keymap("n", "<leader>fs", ":w<CR>", opts)
 
 -- Window nav
 keymap("n", "<C-h>", "<C-w>h", opts)

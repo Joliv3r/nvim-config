@@ -104,7 +104,78 @@ function M.config()
   }
 
   local mappings = {
-    f = { name = "Files" },
+    ["q"] = { "<cmd>confirm q<cr>", "Quit" },
+    ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+    f = {
+      name = "Files",
+      f = { "<cmd>Telescope find_files<cr>", "Find files" },
+      g = { "<cmd>Telescope live_grep<cr>", "Find text" },
+      r = { "<cmd>Telescope oldfiles<cr>", "Recent files" },
+      s = { "<cmd>confirm w<cr>", "Save file" },
+    },
+    p = {
+      name = "Plugins",
+      i = { "<cmd>Lazy install<cr>", "Install" },
+      s = { "<cmd>Lazy sync<cr>", "Sync" },
+      S = { "<cmd>Lazy clear<cr>", "Status" },
+      c = { "<cmd>Lazy clean<cr>", "Clean" },
+      u = { "<cmd>Lazy update<cr>", "Update" },
+      p = { "<cmd>Lazy profile<cr>", "Profile" },
+      l = { "<cmd>Lazy log<cr>", "Log" },
+      d = { "<cmd>Lazy debug<cr>", "Debug" },
+    },
+    g = {
+      name = "Git",
+      g = { "<cmd>Neogit<cr>", "Neogit" },
+      j = { "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", "Next Hunk" },
+      k = { "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", "Prev Hunk" },
+      l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
+      p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
+      r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
+      R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
+      s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+      u = {
+        "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
+        "Undo Stage Hunk",
+      },
+      o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
+      b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+      c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+      C = {
+        "<cmd>Telescope git_bcommits<cr>",
+        "Checkout commit(for current file)",
+      },
+      d = {
+        "<cmd>Gitsigns diffthis HEAD<cr>",
+        "Git Diff",
+      },
+    },
+    l = {
+      name = "LSP",
+      a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+      d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
+      w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
+      f = { "<cmd>lua vim.lsp.buf.format({timeout_ms = 1000000})<cr>", "Format" },
+      i = { "<cmd>LspInfo<cr>", "Info" },
+      I = { "<cmd>Mason<cr>", "Mason Info" },
+      j = {
+        "<cmd>lua vim.diagnostic.goto_next()<cr>",
+        "Next Diagnostic",
+      },
+      k = {
+        "<cmd>lua vim.diagnostic.goto_prev()<cr>",
+        "Prev Diagnostic",
+      },
+      l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
+      q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
+      r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+      s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+      S = {
+        "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+        "Workspace Symbols",
+      },
+      e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
+    },
   }
 
 

@@ -1,7 +1,7 @@
 local o = vim.opt
 
 o.backup = false                          -- creates a backup file
--- o.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
+o.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
 o.cmdheight = 2                           -- more space in the neocim command line for displaying messages
 o.completeopt = { "menuone", "noselect" } -- insert mode completion
 o.conceallevel = 0                        -- displays text with conceal syntax attribute normally
