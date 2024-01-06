@@ -18,18 +18,6 @@ vim.g.maplocalleader = " "
 --    term_mode = "t",
 --    command_mode = "c",
 
--- Some custom maps
-keymap("n", "<leader>s", ":split<cr>", opts)
-keymap("n", "<leader>v", ":vsplit<cr>", opts)
--- keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-keymap("n", "<leader>l", ":Lazy<CR>", opts)
--- keymap("n", "<leader>q", ":q<CR>", opts)
-
--- File navigation through Telescope
--- keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
--- keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
--- keymap("n", "<leader>fr", ":Telescope oldfiles<CR>", opts)
--- keymap("n", "<leader>fs", ":w<CR>", opts)
 
 -- Window nav
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -76,12 +64,6 @@ keymap("x", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("x", "K", ":m '>-2<CR>gv=gv", opts)
 keymap("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("x", "<A-k>", ":m '>-2<CR>gv=gv", opts)
-
--- Bufferline
-keymap("n", "<leader>d", ":Bdelete<CR>", opts)
-
--- Toggleterm
-keymap("n", "<leader>t", ":ToggleTerm direction=float<CR>", opts)
 
 
 -- Terminal
