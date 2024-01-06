@@ -29,11 +29,11 @@ o.number = true                           -- set numbered lines
 o.relativenumber = true
 o.numberwidth = 2
 o.signcolumn = "yes"
-o.wrap = true
+o.wrap = false
 o.linebreak = true                        -- don't split words for wrap
 o.scrolloff = 8                           -- number of lines clearance up and down
 o.sidescrolloff = 8
-o.guifont = "monospace:h17"
+o.guifont = "mononoki"
 o.termguicolors = true                    -- set term gui colors
 
 -- vim.opt.shortmess = "ilmnrx"                        -- flags to shorten vim messages, see :help 'shortmess'

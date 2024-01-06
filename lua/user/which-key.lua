@@ -185,7 +185,13 @@ function M.config()
     b = {
       name = "Buffer",
       d = { "<cmd>Bdelete %<cr>", "Delete" },
-    }
+    },
+    o = {
+      name = "Options",
+      w = { "<cmd>set wrap!<cr>", "Wrap lines" },
+      i = { "<cmd>IBLToggle<cr>", "Indent lines" },
+      r = { "<cmd>set realativenumber!<cr>", "Relative numbers" },
+    },
   }
 
 
