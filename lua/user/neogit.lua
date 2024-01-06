@@ -13,6 +13,7 @@ local M = {
 
 
 function M.config()
+  ---@diagnostic disable-next-line: missing-parameter
   require("neogit").setup()
 end
 

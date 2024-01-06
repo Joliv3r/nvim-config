@@ -106,12 +106,12 @@ function M.config()
   local mappings = {
     ["q"] = { "<cmd>confirm q<cr>", "Quit" },
     ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+    ["s"] = { "<cmd>confirm w<cr>", "Save file" },
     f = {
-      name = "Files",
+      name = "Find",
       f = { "<cmd>Telescope find_files<cr>", "Find files" },
       g = { "<cmd>Telescope live_grep<cr>", "Find text" },
       r = { "<cmd>Telescope oldfiles<cr>", "Recent files" },
-      s = { "<cmd>confirm w<cr>", "Save file" },
     },
     p = {
       name = "Plugins",
