@@ -81,6 +81,7 @@ function M.config()
           ["<PageDown>"] = actions.results_scrolling_down,
 
           ["?"] = actions.which_key,
+          ["q"] = actions.close,
         },
       },
     },

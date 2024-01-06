@@ -176,6 +176,16 @@ function M.config()
       },
       e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
     },
+    t = {
+      name = "Terminal",
+      f = { "<cmd>ToggleTerm direction=float<cr>", "Floating" },
+      h = { "<cmd>ToggleTerm direction=horizontal<cr>", "Horizontal" },
+      v = { "<cmd>ToggleTerm direction=vertical<cr>", "Vertical" },
+    },
+    b = {
+      name = "Buffer",
+      d = { "<cmd>Bdelete %<cr>", "Delete" },
+    }
   }
 
 
