@@ -20,6 +20,15 @@ return {
           [vim.fn.stdpath "config" .. "/lua"] = true,
         },
       },
+      hint = {
+        enable = true,
+        arrayIndex = "Disable",
+        await = true,
+        paramName = "Disable",
+        paramType = true,
+        semicolon = "All",
+        setType = false,
+      },
       telemetry = {
         enable = false,
       },

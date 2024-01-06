@@ -20,12 +20,16 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+  -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 
 M.on_attach = function(client, bufnr)
   lsp_keymaps(bufnr)
+
+  if client.support_method "textDocument/inlayHint" then
+    vim.lsp.inlay_hint.enable(bufnr, true)
+  end
 end
 
 function M.common_capabilities()
@@ -64,7 +68,7 @@ function M.config()
         { name = "DiagnosticSignInfo", text = icons.diagnostics.Information },
       },
     },
-    virtual_text = false,
+    virtual_text = true,
     update_in_insert = false,
     underline = true,
     severity_sort = true,
