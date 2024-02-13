@@ -56,6 +56,12 @@ function M.config()
 
   local servers = {
     "lua_ls",
+    "pyright",
+    "html",
+    "bashls",
+    "jsonls",
+    "texlab",
+    "hls",
   }
 
   local default_diagnostic_config = {

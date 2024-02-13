@@ -7,7 +7,7 @@ local M = {
 
 
 function M.config()
-
+  vim.cmd( "let g:mkdp_browser = '/usr/bin/firefox'" )
 end
 
 

@@ -192,6 +192,11 @@ function M.config()
       i = { "<cmd>IBLToggle<cr>", "Indent lines" },
       r = { "<cmd>set realativenumber!<cr>", "Relative numbers" },
     },
+    c = {
+      name = "Compile",
+      p = { "<cmd>!python %<TAB><cr>", "Python" },
+      l = { "<cmd>!latexmk -cd -pdf -shell-escape %<TAB> && pkill -HUP mupdf<cr>", "latexmk -pdf" },
+    }
   }
 
 

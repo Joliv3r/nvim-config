@@ -13,8 +13,8 @@ function M.config()
     "html",
     "bashls",
     "pyright",
-    "ltex",
-    -- "hls",
+    "texlab",
+    "hls",
   }
 
   require("mason").setup {
