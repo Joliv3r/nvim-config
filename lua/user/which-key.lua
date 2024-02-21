@@ -108,10 +108,11 @@ function M.config()
     ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
     ["s"] = { "<cmd>confirm w<cr>", "Save file" },
     f = {
-      name = "Find",
+      name = "Files",
       f = { "<cmd>Telescope find_files<cr>", "Find files" },
       g = { "<cmd>Telescope live_grep<cr>", "Find text" },
       r = { "<cmd>Telescope oldfiles<cr>", "Recent files" },
+      o = { "<cmd>!mupdf %:r.pdf &<cr>", "Open pdf file" }
     },
     p = {
       name = "Plugins",

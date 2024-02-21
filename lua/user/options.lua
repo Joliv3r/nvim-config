@@ -35,6 +35,7 @@ o.scrolloff = 8                           -- number of lines clearance up and do
 o.sidescrolloff = 8
 o.guifont = "mononoki"
 o.termguicolors = true                    -- set term gui colors
+o.foldmethod = "indent"
 
 -- vim.opt.shortmess = "ilmnrx"                        -- flags to shorten vim messages, see :help 'shortmess'
 vim.opt.shortmess:append "c"                           -- don't give |ins-completion-menu| messages
