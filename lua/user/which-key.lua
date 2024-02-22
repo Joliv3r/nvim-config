@@ -195,8 +195,8 @@ function M.config()
     },
     c = {
       name = "Compile",
-      p = { "<cmd>!python %<TAB><cr>", "Python" },
-      l = { "<cmd>!latexmk -cd -pdf -shell-escape %<TAB> && pkill -HUP mupdf<cr>", "latexmk -pdf" },
+      p = { "<cmd>!python %<cr>", "Python" },
+      l = { "<cmd>!latexmk -cd -pdf -shell-escape -auxdir=auxdir/ % && pkill -HUP mupdf<cr>", "latexmk -pdf" },
     }
   }
 
