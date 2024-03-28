@@ -62,6 +62,7 @@ function M.config()
     "jsonls",
     "texlab",
     "hls",
+    "r_language_server",
   }
 
   local default_diagnostic_config = {

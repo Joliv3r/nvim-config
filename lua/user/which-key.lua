@@ -112,7 +112,7 @@ function M.config()
       f = { "<cmd>Telescope find_files<cr>", "Find files" },
       g = { "<cmd>Telescope live_grep<cr>", "Find text" },
       r = { "<cmd>Telescope oldfiles<cr>", "Recent files" },
-      o = { "<cmd>!mupdf %:r.pdf &<cr>", "Open pdf file" }
+      o = { "<cmd>!zathura %:r.pdf &<cr>", "Open pdf file" }
     },
     p = {
       name = "Plugins",
@@ -192,11 +192,19 @@ function M.config()
       w = { "<cmd>set wrap!<cr>", "Wrap lines" },
       i = { "<cmd>IBLToggle<cr>", "Indent lines" },
       r = { "<cmd>set realativenumber!<cr>", "Relative numbers" },
+      f = { "<cmd>set foldmethod=indent<cr>", "Fold by indents" },
+      m = { "<cmd>set foldmethod=manual<cr>", "Fold manual" },
     },
     c = {
       name = "Compile",
       p = { "<cmd>!python %<cr>", "Python" },
-      l = { "<cmd>!latexmk -cd -pdf -shell-escape -auxdir=auxdir/ % && pkill -HUP mupdf<cr>", "latexmk -pdf" },
+      l = { "<cmd>!latexmk -cd -pdf -shell-escape -auxdir=auxdir/ %<cr>", "latexmk -pdf" },
+      r = { "<cmd>!Rscript %<cr>", "R" },
+    },
+    w = {
+      name = "Window",
+      s = { "<cmd>vsplit<cr>", "Vertical split" },
+      l = { "<cmd>split<cr>", "Horizontal split" },
     }
   }
 

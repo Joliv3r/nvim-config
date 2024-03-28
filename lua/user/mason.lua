@@ -15,6 +15,7 @@ function M.config()
     "pyright",
     "texlab",
     "hls",
+    "r_language_server",
   }
 
   require("mason").setup {
