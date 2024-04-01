@@ -14,7 +14,6 @@ function M.config()
     "bashls",
     "pyright",
     "texlab",
-    "hls",
     "r_language_server",
   }
 

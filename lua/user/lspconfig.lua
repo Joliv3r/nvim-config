@@ -61,7 +61,6 @@ function M.config()
     "bashls",
     "jsonls",
     "texlab",
-    "hls",
     "r_language_server",
   }
 
