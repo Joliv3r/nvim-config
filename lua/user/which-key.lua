@@ -198,7 +198,7 @@ function M.config()
     c = {
       name = "Compile",
       p = { "<cmd>!python %<cr>", "Python" },
-      l = { "<cmd>!latexmk -cd -pdf -shell-escape -auxdir=auxdir/ %<cr>", "latexmk -pdf" },
+      l = { "<cmd>Dispatch latexmk -cd -pdf -shell-escape -auxdir=auxdir/ <cr>", "latexmk -pdf" },
       r = { "<cmd>!Rscript %<cr>", "R" },
     },
     w = {
