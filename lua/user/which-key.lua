@@ -197,7 +197,7 @@ function M.config()
     },
     c = {
       name = "Compile",
-      p = { "<cmd> confirm w<cr> <cmd>!python %<cr>", "Python" },
+      p = { "<cmd> confirm w<cr> <cmd>Dispatch python %<cr>", "Python" },
       l = { "<cmd> confirm w<cr> <cmd>Dispatch latexmk -cd -pdf -shell-escape -auxdir=auxdir/ %<cr>", "latexmk -pdf" },
       r = { "<cmd> confirm w<cmd>!Rscript %<cr>", "R" },
     },
