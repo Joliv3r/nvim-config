@@ -62,6 +62,8 @@ function M.config()
     "jsonls",
     "texlab",
     "r_language_server",
+    "clangd",
+    "rust_analyzer"
   }
 
   local default_diagnostic_config = {

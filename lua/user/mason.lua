@@ -15,6 +15,8 @@ function M.config()
     "pyright",
     "texlab",
     "r_language_server",
+    "clangd",
+    "rust_analyzer",
   }
 
   require("mason").setup {
