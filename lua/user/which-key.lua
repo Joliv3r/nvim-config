@@ -200,6 +200,7 @@ function M.config()
       p = { "<cmd> confirm w<cr> <cmd>Dispatch python %<cr>", "Python" },
       l = { "<cmd> confirm w<cr> <cmd>Dispatch latexmk -cd -pdf -shell-escape -auxdir=auxdir/ %<cr>", "latexmk -pdf" },
       r = { "<cmd> confirm w<cmd>!Rscript %<cr>", "R" },
+      m = { "<cmd> confirm w<cr> <cmd>Dispatch make<cr>", "Make" },
     },
     w = {
       name = "Window",
