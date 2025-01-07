@@ -194,6 +194,7 @@ function M.config()
       r = { "<cmd>set realativenumber!<cr>", "Relative numbers" },
       f = { "<cmd>set foldmethod=indent<cr>", "Fold by indents" },
       m = { "<cmd>set foldmethod=manual<cr>", "Fold manual" },
+      s = { "<cmd>set invspell<cr>", "Spellcheck" },
     },
     c = {
       name = "Compile",

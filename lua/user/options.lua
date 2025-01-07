@@ -37,6 +37,8 @@ o.guifont = "mononoki"
 o.termguicolors = true                    -- set term gui colors
 -- o.foldmethod = "indent"
 o.fillchars:append { eob = " " }
+o.spelllang = {'en_us','nb'}
+o.spell = false
 
 -- vim.opt.shortmess = "ilmnrx"                        -- flags to shorten vim messages, see :help 'shortmess'
 vim.opt.shortmess:append "c"                           -- don't give |ins-completion-menu| messages
