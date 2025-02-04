@@ -40,8 +40,8 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<C-n>", ":bnext<CR>", opts)
+keymap("n", "<C-p>", ":bprevious<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)
@@ -49,6 +49,9 @@ keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
 -- Press jk to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
+
+-- Normal mode o in insert mode
+keymap("i", "<C-CR>", "<C-o>o", opts)
 
 -- Stay in indent mode
 keymap("v", "<", "<gv^", opts)
