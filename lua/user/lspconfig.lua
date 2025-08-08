@@ -63,7 +63,8 @@ function M.config()
     "texlab",
     "r_language_server",
     "clangd",
-    "rust_analyzer"
+    "rust_analyzer",
+    "nil_ls"
   }
 
   local default_diagnostic_config = {
