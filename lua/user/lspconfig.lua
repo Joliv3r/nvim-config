@@ -64,7 +64,8 @@ function M.config()
     "r_language_server",
     "clangd",
     "rust_analyzer",
-    "nil_ls"
+    "nil_ls",
+    "gopls"
   }
 
   local default_diagnostic_config = {
