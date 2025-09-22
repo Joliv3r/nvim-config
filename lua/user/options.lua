@@ -35,13 +35,17 @@ o.scrolloff = 8                           -- number of lines clearance up and do
 o.sidescrolloff = 8
 o.guifont = "mononoki"
 o.termguicolors = true                    -- set term gui colors
--- o.foldmethod = "indent"
+o.foldmethod = "manual"
 o.fillchars:append { eob = " " }
-o.spelllang = {'en_us','nb'}
+o.spelllang = {'en_us'}
 o.spell = false
+o.breakindent = true
 
 -- vim.opt.shortmess = "ilmnrx"                        -- flags to shorten vim messages, see :help 'shortmess'
 vim.opt.shortmess:append "c"                           -- don't give |ins-completion-menu| messages
 vim.opt.iskeyword:append "-"                           -- hyphenated words recognized by searches
 vim.opt.formatoptions:remove({ "c", "r", "o" })        -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
 vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")  -- separate vim plugins from neovim in case vim still in use
+
+-- Some other g options
+vim.g.tex_flavor = 'latex'
