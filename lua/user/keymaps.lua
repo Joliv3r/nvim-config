@@ -71,3 +71,6 @@ keymap("x", "<A-k>", ":m '>-2<CR>gv=gv", opts)
 
 -- Terminal
 vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', opts)
+
+-- Save in insert mode
+keymap("i", "<C-s>", "<C-o>:confirm w<CR>", opts)
