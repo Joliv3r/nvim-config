@@ -49,3 +49,22 @@ vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")  -- separate vim plugins f
 
 -- Some other g options
 vim.g.tex_flavor = 'latex'
+
+-- Give the option of automatically pushing changes for git repo.
+-- NOTE: you can avoid push by not authenticating the ssh-key.
+if vim.env.NVIM_AUTO_GIT == "1" then
+  vim.api.nvim_create_autocmd("VimLeave", {
+    callback = function()
+      local handle = io.popen("git status --porcelain")
+      local result = handle:read("*a")
+      handle:close()
+
+      if result ~= "" then
+        local msg = vim.fn.input("Commit message: ")
+        if msg ~= "" then
+          os.execute("git add -A && git commit -m '" .. msg .. "' && git push")
+        end
+      end
+    end,
+  })
+end
