@@ -51,7 +51,7 @@ end
 
 
 function M.config()
-  local lspconfig = require "lspconfig"
+  -- local lspconfig = require "lspconfig"
   local icons = require "user.icons"
 
   local servers = {
@@ -94,12 +94,14 @@ function M.config()
 
   vim.diagnostic.config(default_diagnostic_config)
 
-  for _, sign in ipairs(vim.tbl_get(vim.diagnostic.config(), "signs", "values") or {}) do
-    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = sign.name })
-  end
+  -- for _, sign in ipairs(vim.tbl_get(vim.diagnostic.config(), "signs", "values") or {}) do
+  --   vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = sign.name })
+  --   vim.diagnostic.config(sign.name, { texthl = sign.name, text = sign.text, numhl = sign.name })
+  -- end
 
-  vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
-  vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
+  -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
+  -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
+  -- vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
   require("lspconfig.ui.windows").default_options.border = "rounded"
 
   for _, server in pairs(servers) do
@@ -117,7 +119,9 @@ function M.config()
       require("neodev").setup {}
     end
 
-    lspconfig[server].setup(opts)
+    vim.lsp.config(server, opts)
+    vim.lsp.enable(server)
+    -- lspconfig[server].setup(opts)
   end
 end
 
