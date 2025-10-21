@@ -4,7 +4,7 @@ return {
       build = {
         -- executable = "pdflatex",
         onSave = true,
-        forwardSearchAfter = true,
+        -- forwardSearchAfter = true,
       },
       forwardSearch = {
         executable = "zathura",
