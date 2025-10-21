@@ -176,6 +176,7 @@ function M.config()
         "Workspace Symbols",
       },
       e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
+      R = { "<cmd>LspRestart<cr>", "Restart LSP" },
     },
     t = {
       name = "Terminal",
