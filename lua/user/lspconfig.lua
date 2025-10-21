@@ -30,6 +30,23 @@ M.on_attach = function(client, bufnr)
   -- if client.support_method "textDocument/inlayHint" then
   --   vim.lsp.inlay_hint.enable(bufnr, true)
   -- end
+  
+  if client.name == "texlab" then
+    -- This function is copied with slight modifications from https://www.xiaowenhu.com/posts/texlab_tut/
+    local function buf_search()
+      local params = {
+          textDocument = { uri = vim.uri_from_bufnr(bufnr) },
+          position = { line = vim.fn.line '.' - 1, character = vim.fn.col '.' },
+      }
+      client.request('textDocument/forwardSearch', params, function(err, result)
+          if err then
+              error(tostring(err))
+          end
+      end, bufnr)
+    end
+    vim.api.nvim_create_user_command("TexlabView", buf_search, { desc = 'TexlabView' })
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>lz", ":TexlabView<cr>", { noremap = true, silent = true, desc = "TexlabView" })
+  end
 end
 
 function M.common_capabilities()
@@ -102,7 +119,13 @@ function M.config()
   -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
   -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
   -- vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
-  require("lspconfig.ui.windows").default_options.border = "rounded"
+  -- require("lspconfig.ui.windows").default_options.border = "rounded"
+
+  vim.o.winborder = "rounded"
+  vim.lsp.buf.hover({border = "rounded"})
+  vim.lsp.buf.signature_help({border = "rounded"})
+
+
 
   for _, server in pairs(servers) do
     local opts = {
