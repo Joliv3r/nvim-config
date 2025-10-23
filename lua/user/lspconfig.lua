@@ -78,7 +78,6 @@ function M.config()
     "bashls",
     "jsonls",
     "texlab",
-    "r_language_server",
     "clangd",
     "rust_analyzer",
     "nil_ls",
