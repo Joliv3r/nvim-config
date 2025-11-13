@@ -5,7 +5,6 @@ return {
         executable = "latexmk",
         args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "-auxdir=aux/", "%f" },
         auxDirectory = "aux/",
-        lodDirectory = "log/",
         onSave = true,
       },
       forwardSearch = {
