@@ -1,40 +1,31 @@
 local M = {
   "nvim-treesitter/nvim-treesitter",
-  event = { "BufReadPost", "BufNewFile" },
+  -- event = { "BufReadPost", "BufNewFile" },
+  branch = 'main',
+  lazy = false,
   build = ":TSUpdate",
 }
 
+-- the parsers that should be installed and enabled
+local ensure_installed = {
+  "lua",
+  "markdown",
+  "markdown_inline",
+  "bash",
+  "python",
+  "latex",
+  "rust",
+  "go",
+  "toml"
+}
+
 function M.config()
-  require("nvim-treesitter.configs").setup {
-    ensure_installed = {
-      "lua",
-      "markdown",
-      "markdown_inline",
-      "bash",
-      "python",
-      "latex",
-      "rust",
-      "go",
-      "toml"
-    }, -- put the language you want in this array
+  require("nvim-treesitter").install(ensure_installed)
 
-    -- ensure_installed = "all", -- one of "all" or a list of languages
-
-    highlight = {
-      enable = true,       -- false will disable the whole extension
-      additional_vim_regex_highlighting = false,
-    },
-
-    autopairs = {
-      enable = true,
-    },
-    indent = { enable = true },
-
-    context_commentstring = {
-      enable = true,
-      enable_autocmd = false,
-    },
-  }
+  vim.api.nvim_create_autocmd('FileType', {
+    pattern = ensure_installed,
+    callback = function() vim.treesitter.start() end,
+  })
 end
 
 return M
