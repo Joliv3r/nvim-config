@@ -28,6 +28,7 @@
           fd
           curl
           python314
+          nodejs_24
         ];
       };
     }
