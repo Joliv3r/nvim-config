@@ -112,7 +112,8 @@ function M.config()
       f = { "<cmd>Telescope find_files<cr>", "Find files" },
       g = { "<cmd>Telescope live_grep<cr>", "Find text" },
       r = { "<cmd>Telescope oldfiles<cr>", "Recent files" },
-      o = { "<cmd>!zathura %:r.pdf &<cr>", "Open pdf file" }
+      o = { "<cmd>!zathura %:r.pdf &<cr>", "Open pdf file" },
+      p = { "<cmd>Telescope planets<cr>", "Use the telescope" },
     },
     p = {
       name = "Plugins",
