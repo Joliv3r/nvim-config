@@ -158,7 +158,7 @@ function M.config()
       d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
       w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
       f = { "<cmd>lua vim.lsp.buf.format({timeout_ms = 1000000})<cr>", "Format" },
-      i = { "<cmd>LspInfo<cr>", "Info" },
+      i = { "<cmd>:checkhealth vim.lsp<cr>", "Info" },
       I = { "<cmd>Mason<cr>", "Mason Info" },
       j = {
         "<cmd>lua vim.diagnostic.goto_next()<cr>",
